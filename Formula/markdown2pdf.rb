@@ -1,25 +1,25 @@
 class Markdown2pdf < Formula
   desc "Create PDF with Markdown files (a md to pdf transpiler)"
   homepage "https://github.com/theiskaa/markdown2pdf"
-  version "0.1.9"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.1.9/markdown2pdf-aarch64-apple-darwin.tar.xz"
-      sha256 "8a95604b17f977f55d423371976c46420dbd52bc537997388c80ac5544564a82"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.2.0/markdown2pdf-aarch64-apple-darwin.tar.xz"
+      sha256 "68adf8ce48fb59062db606051540bdc4469094cef912b03ae837dc6eee0ce43f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.1.9/markdown2pdf-x86_64-apple-darwin.tar.xz"
-      sha256 "d871f04c481c1cb61a452bed93b81fdc87181ab2946d24189e9820b6c5305b69"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.2.0/markdown2pdf-x86_64-apple-darwin.tar.xz"
+      sha256 "f65f5ac15544fa91cc0961e7df45af85eb1550978817d4f3c7a4fec393296501"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.1.9/markdown2pdf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bcf6d411fcdc460bfddf99f1bdc458680fdb808c3d043521bf2224f60e4e8128"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.2.0/markdown2pdf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "20d72c76bddfe064d5e686847316b4c99f0f97fd74b212dfdc34b34153333ef5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.1.9/markdown2pdf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "289e57759fc8637f543ed22fff8ca14b62c73a0901e67c6161db0d298ca562db"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v0.2.0/markdown2pdf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f9214353bad535d1961ac078d2c51a79b6da35ee767fa51ae53bb3ddbd875309"
     end
   end
   license "MIT"
