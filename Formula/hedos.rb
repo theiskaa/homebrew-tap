@@ -1,25 +1,25 @@
 class Hedos < Formula
   desc "Discover, install, and serve the local models already on your machine."
   homepage "https://hedos.ai"
-  version "1.4.0"
+  version "1.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/hedos/releases/download/v1.4.0/hedos-aarch64-apple-darwin.tar.xz"
-      sha256 "3a275ab5f53228135183fc7b88c42d63d9f76a962392c9f02e5f7d58c62613e9"
+      url "https://github.com/theiskaa/hedos/releases/download/v1.4.1/hedos-aarch64-apple-darwin.tar.xz"
+      sha256 "7a62350f7bd58cce57a9cf72a3d2b1fe5f3ab32dbc8b3f5a6a57729a768a85ea"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/hedos/releases/download/v1.4.0/hedos-x86_64-apple-darwin.tar.xz"
-      sha256 "07bd9a01bca5ff123f3f6b51af30e15b29fb8af17184744b5636dd2bb50be157"
+      url "https://github.com/theiskaa/hedos/releases/download/v1.4.1/hedos-x86_64-apple-darwin.tar.xz"
+      sha256 "ca2ee515a3808c27eff02aa470ff3f63f2a9cbf0645af65ee4ce01cd67456b1e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/hedos/releases/download/v1.4.0/hedos-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4902ac8ea59741fdf8d7ffa78c83742c07eba09dc52ed13c74f5ebaf9b71c592"
+      url "https://github.com/theiskaa/hedos/releases/download/v1.4.1/hedos-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6ba22325b2401500c85ea84e614143a42ab4f7059fa63a86858a2ed7147c507c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/hedos/releases/download/v1.4.0/hedos-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6d8d33161800772743b731b5a134d27a7d947b8984dff64b617a313b9e276056"
+      url "https://github.com/theiskaa/hedos/releases/download/v1.4.1/hedos-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "49b207dc7b5788da6e0cf7cc427c9588c8d5e03e86aa05fbe464cc4867b4a971"
     end
   end
   license "MIT"
