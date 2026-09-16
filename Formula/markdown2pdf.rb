@@ -1,25 +1,25 @@
 class Markdown2pdf < Formula
   desc "Create PDF with Markdown files (a md to pdf transpiler)"
   homepage "https://github.com/theiskaa/markdown2pdf"
-  version "1.6.0"
+  version "1.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.0/markdown2pdf-aarch64-apple-darwin.tar.xz"
-      sha256 "94f6b83fd259121efb0ceebe7175815f562e1d7a4344ba94cb085689f78f2978"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.1/markdown2pdf-aarch64-apple-darwin.tar.xz"
+      sha256 "122029497b1529e3d7269db68d463a077b69ebdca649093f4971e6be7cec74b6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.0/markdown2pdf-x86_64-apple-darwin.tar.xz"
-      sha256 "90ccc80bf890300b3635b396622a46a405713d4045b13362ccdcc83b0a0192c7"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.1/markdown2pdf-x86_64-apple-darwin.tar.xz"
+      sha256 "38cef8283f01d4e7cd3193e8a5f0c3b451903810b58c96eaca38e540781b4e09"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.0/markdown2pdf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ada9949308f65310e0abba141a6a3ffb85deea2339e5d072e8f0b2862dd7ba0b"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.1/markdown2pdf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a5d05fc119178cd5abb46221f4a81973fb9e3ddcd1f5d08cd933efb3b70b7e83"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.0/markdown2pdf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "34d2b90e36306a49992c59684e03a8c445f7c162568051aafa87003329f05e1e"
+      url "https://github.com/theiskaa/markdown2pdf/releases/download/v1.6.1/markdown2pdf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7e1e3943a1b3ac93fb39f8e6155e8a9d739876fe35ed27c034ddb646aef406c5"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Markdown2pdf < Formula
   end
 
   def install
-    bin.install "markdown2pdf" if OS.mac? && Hardware::CPU.arm?
-    bin.install "markdown2pdf" if OS.mac? && Hardware::CPU.intel?
-    bin.install "markdown2pdf" if OS.linux? && Hardware::CPU.arm?
-    bin.install "markdown2pdf" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "markdown2pdf"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "markdown2pdf"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "markdown2pdf"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "markdown2pdf"
+    end
 
     install_binary_aliases!
 
